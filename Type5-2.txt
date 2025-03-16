@@ -1,0 +1,68 @@
+Question 1: Product and Review System
+Create a class named Product with the following attributes:
+
+productName (String)
+price (double)
+category (String)
+reviews (ArrayList of Review objects)
+The Review class should contain the following attributes:
+
+reviewerName (String)
+rating (double)
+The attributes should be private, and both classes should have parameterized constructors.
+
+Methods in the Product class:
+
+void addReview(String reviewerName, double rating): Adds a new review to the product.
+void removeReviewByName(String reviewerName): Removes a review based on the reviewer's name (case-insensitive).
+Map<String, Double> calculateMinMaxRatings(): Returns a map containing the minimum and maximum ratings. Use the keys: "minRating" and "maxRating".
+double calculateAverageRating(): Returns the average rating of all reviews.
+void displayProductDetails(): Displays product details and all reviews.
+Main Method:
+
+Take user input for the product name, price, and category.
+Allow the user to add reviews for the product.
+Remove a review by reviewer name.
+Calculate and display the minimum, maximum, and average ratings.
+Sample Input:
+
+Enter product name: Laptop  
+Enter price: 1200.50  
+Enter category: Electronics  
+Enter number of reviews: 3  
+
+Review 1:  
+Reviewer name: Alice  
+Rating: 4.3  
+
+Review 2:  
+Reviewer name: Bob  
+Rating: 3.5  
+
+Review 3:  
+Reviewer name: Charlie  
+Rating: 4.8  
+
+Enter the reviewer name to remove: Bob  
+Sample Output:
+
+Product Details Before Removing Review:  
+Product Name: Laptop  
+Price: $1200.5  
+Category: Electronics  
+Reviews:  
+Reviewer: Alice, Rating: 4.3  
+Reviewer: Bob, Rating: 3.5  
+Reviewer: Charlie, Rating: 4.8  
+
+Product Details After Removing Review:  
+Product Name: Laptop  
+Price: $1200.5  
+Category: Electronics  
+Reviews:  
+Reviewer: Alice, Rating: 4.3  
+Reviewer: Charlie, Rating: 4.8  
+
+Minimum Rating: 4.3  
+Maximum Rating: 4.8  
+Average Rating: 4.55  

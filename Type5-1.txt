@@ -1,0 +1,68 @@
+Create a class named Movie with the following attributes:
+
+title (String)
+genre (String)
+duration (int, in minutes)
+reviews (ArrayList of Review objects)
+The Review class should contain the following attributes:
+
+reviewerName (String)
+rating (double)
+The above attributes should be private, and both classes should have parameterized constructors to initialize the attributes.
+
+Implement the following methods in the Movie class:
+
+void addReview(String reviewerName, double rating): Adds a review to the list of reviews.
+void removeReviewByReviewer(String reviewerName): Removes a review based on the reviewer's name (case-insensitive).
+Map<String, Double> findMinMaxRatings(): Returns a map containing the minimum and maximum ratings from the reviews. The map should have the keys: "minRating" and "maxRating".
+void displayMovieDetails(): Displays the details of the movie including all the reviews.
+In the main method, use a Scanner object to:
+
+Read the details of a movie: title, genre, and duration.
+Read the number of reviews and the details of each review (reviewer's name and rating).
+Call the appropriate methods to:
+Add reviews,
+Remove a review by a specific reviewer,
+Display the movie details before and after removal,
+Print the minimum and maximum ratings.
+Sample Input
+
+Enter movie title: Inception  
+Enter genre: Science Fiction  
+Enter duration (in minutes): 148  
+Enter number of reviews: 3  
+
+Enter review 1:  
+Reviewer name: Alice  
+Rating: 4.5  
+
+Enter review 2:  
+Reviewer name: Bob  
+Rating: 3.0  
+
+Enter review 3:  
+Reviewer name: Charlie  
+Rating: 4.8  
+
+Enter the reviewer name to remove: Bob  
+Sample Output
+
+Movie Details Before Removing Review:  
+Title: Inception  
+Genre: Science Fiction  
+Duration: 148 minutes  
+Reviews:  
+Reviewer: Alice, Rating: 4.5  
+Reviewer: Bob, Rating: 3.0  
+Reviewer: Charlie, Rating: 4.8  
+
+Movie Details After Removing Review:  
+Title: Inception  
+Genre: Science Fiction  
+Duration: 148 minutes  
+Reviews:  
+Reviewer: Alice, Rating: 4.5  
+Reviewer: Charlie, Rating: 4.8  
+
+Minimum Rating: 4.5  
+Maximum Rating: 4.8  

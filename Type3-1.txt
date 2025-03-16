@@ -1,0 +1,121 @@
+Problem Statement:
+You are tasked with managing a parking system in a city. You need to create two classes: Car and ParkingLot.
+
+Car Class
+Attributes:
+carId – int
+carNumber – String
+ownerName – String
+model – String
+price – double
+isParked – boolean (true if the car is parked, false if not)
+hoursParked – int (how many hours the car has been parked)
+Constructor:
+Initialize all attributes.
+
+Getters/Setters:
+Provide getters and setters for all attributes.
+
+ParkingLot Class
+Attributes:
+parkingLotName – String
+capacity – int (maximum number of cars the parking lot can hold)
+cars – Array of Car objects
+Constructor:
+Initialize the parking lot name, capacity, and the array of cars.
+
+Solution Class
+Method 1: findLongestParkedCarInEachParkingLot(ParkingLot[] parkingLots)
+Input Parameters:
+
+An array of ParkingLot objects.
+Returns:
+
+Prints the longest parked car for each parking lot in the specified format.
+Method 2: getCarsBelowPrice(ParkingLot[] parkingLots, double maxPrice)
+Input Parameters:
+
+An array of ParkingLot objects.
+A double representing the maximum price of the car.
+Returns:
+
+Prints all cars parked in all parking lots that are priced below the given max price.
+Input Format
+The input starts with the number of parking lots.
+
+For each parking lot, input its attributes:
+
+parkingLotName
+capacity
+The number of cars currently parked.
+For each car, input its attributes:
+
+carId, carNumber, ownerName, model, price, isParked, and hoursParked.
+Then, input the maximum price to be passed to the getCarsBelowPrice method.
+
+Output Format
+For each parking lot:
+Print the parking lot name.
+Print the longest parked car's details in the format:
+
+carId, carNumber, ownerName, model, price, isParked, hoursParked.
+For cars below the given price:
+Print the details of each car in the format:
+
+parkingLotName, carId, carNumber, ownerName, model, price, isParked, hoursParked.
+Sample Input
+arduino
+Copy code
+2  
+CityCenterParking  
+10  
+3  
+1 KA01AB1234 John Tesla 4500000 true 5  
+2 KA02CD5678 Alice BMW 4000000 true 3  
+3 KA03EF9101 Bob Toyota 2500000 false 1  
+MallParking  
+5  
+2  
+4 KA04GH1122 Charlie Hyundai 1800000 true 7  
+5 KA05IJ3344 Diana Ford 2200000 true 2  
+3000000  
+Sample Output
+yaml
+Copy code
+Longest Parked Cars:  
+ParkingLot: CityCenterParking  
+carId: 1  
+carNumber: KA01AB1234  
+ownerName: John  
+model: Tesla  
+price: 4500000.0  
+isParked: true  
+hoursParked: 5  
+
+ParkingLot: MallParking  
+carId: 4  
+carNumber: KA04GH1122  
+ownerName: Charlie  
+model: Hyundai  
+price: 1800000.0  
+isParked: true  
+hoursParked: 7  
+
+Cars below 3000000.0:  
+ParkingLot: CityCenterParking  
+carId: 3  
+carNumber: KA03EF9101  
+ownerName: Bob  
+model: Toyota  
+price: 2500000.0  
+isParked: false  
+hoursParked: 1  
+
+ParkingLot: MallParking  
+carId: 4  
+carNumber: KA04GH1122  
+ownerName: Charlie  
+model: Hyundai  
+price: 1800000.0  
+isParked: true  
+hoursParked: 7

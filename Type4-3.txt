@@ -1,0 +1,95 @@
+1.Problem Statement:
+You are tasked with managing a database of movies and actors. Create two classes: Movie and Actor.
+
+Actor Class:
+Attributes:
+actorId – int
+name – String
+age – int
+awardsWon – int
+totalEarnings – double
+moviesActedIn – int
+Constructor: Initialize all attributes.
+
+Getters/Setters: Provide getters and setters for all attributes.
+
+Movie Class:
+Attributes:
+movieId – int
+title – String
+releaseYear – int
+actors – Array of Actor objects
+boxOfficeCollection – double
+Constructor: Initialize the movie details and an array of actors.
+
+Solution Class:
+
+Method 1: findActorFromEachMovieWith2ndHighestEarning(Movie[] movies)
+Input Parameters:
+An array of Movie objects.
+Returns: Prints the actor for each movie based on the actor with 2nd highest earnings.
+
+
+Method 2: calculateTotalEarningsAcrossMovies(Movie[] movies)
+Input Parameters:
+An array of Movie objects.
+Returns: Distributes the box office collection equally among the actors, updates each actor's total earnings, and prints the updated earnings.
+
+
+Input Format:
+The input starts with the number of movies.
+For each movie, input its attributes:
+movieId, title, releaseYear, boxOfficeCollection
+The number of actors in that movie.
+For each actor, input:
+actorId, name, age, awardsWon, totalEarnings, moviesActedIn
+
+Output Format:
+
+For each movie:1st method
+Movie title
+Movie releaseYear
+actotId
+actor name
+its totalEarnings
+moviesActedIn
+
+For actors across all movies:2nd method
+updated totalEarnings of each actor
+
+
+
+Sample Input:
+2
+1 Avengers 2019 200000000
+2
+1 RobertDowneyJr 55 3 50000000 10
+2 ChrisEvans 40 1 30000000 8
+2 JusticeLeague 2017 150000000
+2
+3 BenAffleck 48 2 35000000 5
+4 GalGadot 35 1 25000000 4
+
+
+Sample Output:
+
+Movie: Avengers
+ReleasedYear: 2019
+ActotId: 2
+Actor Name: ChrisEvans
+TotalEarnings: 30000000
+MoviesActedIn: 8
+
+Movie: JusticeLeague
+ReleasedYear: 2017
+ActotId: 4
+Actor Name: GalGadot
+TotalEarnings: 25000000
+MoviesActedIn: 4
+
+
+Updated Earnings:
+RobertDowneyJr new earnings: 150000000.0
+ChrisEvans new earnings: 100000000.0
+BenAffleck new earnings: 110000000.0
+GalGadot new earnings: 100000000.0

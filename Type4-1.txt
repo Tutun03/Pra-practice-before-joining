@@ -1,0 +1,110 @@
+Problem Statement:
+You are tasked with managing a library's collection of books and the users who borrow them. You need to create two classes: Book and Library.
+
+Book Class:
+Attributes:
+
+bookId – int
+title – String
+author – String
+price – double
+isAvailable – boolean (true if available, false if not)
+borrowedCount – int (how many times the book has been borrowed)
+Constructor: Initialize all attributes.
+
+Getters/Setters: Provide getters and setters for all attributes.
+
+Library Class:
+Attributes:
+
+libraryName – String
+userCount – int (the number of users registered with the library)
+books – Array of Book objects
+Constructor: Initialize the library name, books, and user count.
+
+Solution Class:
+
+Method 1: findMostBorrowedBookFromEachLibrary(Library[] libraries)
+Input Parameters:
+An array of Library objects.
+Returns: Prints the most borrowed book for each library.
+
+Method 2: getBooksBelowPrice(Library[] libraries, double maxPrice)
+Input Parameters:
+An array of Library objects.
+A double representing the maximum price.
+Returns: Prints all available books across all libraries that are priced below the given maxPrice.
+
+Input Format:
+The input starts with the number of libraries.
+For each library, input its attributes:
+libraryName
+userCount
+The number of books.
+For each book, input its attributes:
+bookId, title, author, price, isAvailable, and borrowedCount.
+Then input the maximum price to be passed to the getBooksBelowPrice method.
+
+Output Format:
+For each library:
+Print the library name.
+Print the most borrowed book's details in the format: bookId, title, author, price, isAvailable, borrowedCount.
+
+For books below the given price:
+Print the details of each book that meets the criteria in the format:
+libraryName, bookId, title, author, price, isAvailable, borrowedCount.
+
+
+Sample Input:
+
+2
+CentralLibrary
+3
+3
+1 TheHobbit Tolkien 500.50 true 2
+2 HarryPotter Rowling 600.00 false 5
+3 Dune Herbert 750.75 true 3
+CommunityLibrary
+2
+2
+4 1984 Orwell 450.00 true 1
+5 BraveNewWorld Huxley 550.00 true 0
+600
+
+
+
+Sample Output:
+
+Most Borrowed Books:
+Library: CentralLibrary
+bookId: 2
+title: HarryPotter
+author: Rowling
+price: 600.0
+isAvailable: false
+borrowedCount: 5
+
+Library: CommunityLibrary
+bookId: 4
+title: 1984
+author: Orwell
+price: 450.0
+isAvailable: true
+borrowedCount: 1
+
+Books below 600.0:
+Library: CentralLibrary
+bookId: 1
+title: TheHobbit
+author: Tolkien
+price: 500.5
+isAvailable: true
+borrowedCount: 2
+
+Library: CommunityLibrary
+bookId: 4
+title: 1984
+author: Orwell
+price: 450.0
+isAvailable: true
+borrowedCount: 1

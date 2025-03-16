@@ -1,0 +1,123 @@
+Problem Statement:
+You are tasked with managing an online movie streaming service. You need to create two classes: Movie and StreamingPlatform.
+
+Movie Class
+Attributes:
+movieId – int
+title – String
+genre – String
+rating – double (average user rating between 0.0 to 5.0)
+isAvailable – boolean (true if the movie is currently available for streaming, false otherwise)
+viewCount – int (the number of times the movie has been streamed)
+Constructor:
+Initialize all attributes.
+
+Getters/Setters:
+Provide getters and setters for all attributes.
+
+StreamingPlatform Class
+Attributes:
+platformName – String
+subscriptionCount – int (number of active subscribers)
+movies – Array of Movie objects
+Constructor:
+Initialize the platform name, subscription count, and the array of movies.
+
+Solution Class
+Method 1: findMostStreamedMovieInEachPlatform(StreamingPlatform[] platforms)
+Input Parameters:
+
+An array of StreamingPlatform objects.
+Returns:
+
+Prints the most streamed movie for each platform in the specified format.
+Method 2: getMoviesAboveRating(StreamingPlatform[] platforms, double minRating)
+Input Parameters:
+
+An array of StreamingPlatform objects.
+A double representing the minimum rating.
+Returns:
+
+Prints all movies available across all platforms with a rating above the given value.
+Input Format
+The input starts with the number of streaming platforms.
+
+For each platform, input its attributes:
+
+platformName
+subscriptionCount
+The number of movies available.
+For each movie, input its attributes:
+
+movieId, title, genre, rating, isAvailable, and viewCount.
+Then, input the minimum rating to be passed to the getMoviesAboveRating method.
+
+Output Format
+For each platform:
+Print the platform name.
+Print the most streamed movie's details in the format:
+
+movieId, title, genre, rating, isAvailable, viewCount.
+For movies above the given rating:
+Print the details of each movie in the format:
+
+platformName, movieId, title, genre, rating, isAvailable, viewCount.
+Sample Input
+arduino
+Copy code
+2  
+Netflix  
+50000  
+3  
+1 StrangerThings SciFi 4.8 true 200000  
+2 TheCrown Drama 4.6 true 150000  
+3 Extraction Action 4.2 false 120000  
+PrimeVideo  
+30000  
+2  
+4 TheTomorrowWar Action 4.5 true 100000  
+5 GoodOmens Fantasy 4.9 true 180000  
+4.5  
+Sample Output
+yaml
+Copy code
+Most Streamed Movies:  
+Platform: Netflix  
+movieId: 1  
+title: StrangerThings  
+genre: SciFi  
+rating: 4.8  
+isAvailable: true  
+viewCount: 200000  
+
+Platform: PrimeVideo  
+movieId: 5  
+title: GoodOmens  
+genre: Fantasy  
+rating: 4.9  
+isAvailable: true  
+viewCount: 180000  
+
+Movies above 4.5:  
+Platform: Netflix  
+movieId: 1  
+title: StrangerThings  
+genre: SciFi  
+rating: 4.8  
+isAvailable: true  
+viewCount: 200000  
+
+Platform: PrimeVideo  
+movieId: 5  
+title: GoodOmens  
+genre: Fantasy  
+rating: 4.9  
+isAvailable: true  
+viewCount: 180000  
+Platform: PrimeVideo  
+movieId: 4  
+title: TheTomorrowWar  
+genre: Action  
+rating: 4.5  
+isAvailable: true  
+viewCount: 100000

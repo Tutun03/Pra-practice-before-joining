@@ -1,0 +1,59 @@
+Create a class named Student with the following attributes:
+
+id (int)
+name (String)
+marks (double array)
+The above attributes should be private, and the class should have a parameterized constructor to initialize them.
+
+Implement the following methods in the Student class:
+
+getAverageMarks(): This method should return the average marks of the student.
+getGrade(): This method should return the grade of the student based on the average marks. Use the following scale:
+>=90: "A"
+>=80 and <90: "B"
+>=70 and <80: "C"
+<70: "D"
+Create a class named Classroom with the following attributes:
+
+className (String)
+students (Student array)
+numStudents (int)
+The above attributes should be private, and the class should have a parameterized constructor to initialize them.
+
+Implement the following methods in the Classroom class:
+
+getClassAverage(): This method should return the average marks of all the students in the class.
+getTopper(): This method should return the student with the highest average marks.
+getStudentsByGrade(String grade): This method should return an array of all students with the given grade.
+In the main method, use a Scanner object to read the values of the class name, number of students, and the student details (id, name, and marks) in a loop. Once all student details have been read, create a Classroom object and pass the appropriate parameters. Finally, call the three methods mentioned above and print the output.
+
+Note: Marks will be entered as space-separated values, and the grade search should be case-insensitive.
+
+Sample Input:
+
+Enter class name: Grade 10  
+Enter number of students: 3  
+Enter student details:  
+Student 1:  
+Enter id: 1  
+Enter name: Alice  
+Enter marks: 85 90 88  
+
+Student 2:  
+Enter id: 2  
+Enter name: Bob  
+Enter marks: 78 80 75  
+
+Student 3:  
+Enter id: 3  
+Enter name: Charlie  
+Enter marks: 92 95 90  
+Sample Output:
+
+
+Class average: 85.33  
+Topper:  
+ID: 3, Name: Charlie, Average Marks: 92.33, Grade: A  
+Students with grade: B  
+ID: 1, Name: Alice, Average Marks: 87.67, Grade: B  
+ID: 2, Name: Bob, Average Marks: 77.67, Grade: C  
